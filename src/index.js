@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyContext from './global-components-context';
+import contextValue from './global-component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MyContext.Provider value={contextValue}>
+	    <App />
+	  </MyContext.Provider>
   </React.StrictMode>
 );
 
